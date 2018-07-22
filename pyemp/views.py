@@ -98,6 +98,8 @@ def delbook(req):
 # <11>first():               返回第一条记录
 # <12>last():                返回最后一条记录
 #  <13>exists():             如果QuerySet包含数据，就返回True，否则返回False。
+
+## 万能的双下划线 __
 def selectbook(req):
     bList = Book.objects.all()[:3]  # 切片
     print(bList[0].__str__())
