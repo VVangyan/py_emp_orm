@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>句点符</title>
+</head>
+<body>
+{% comment %}# 1 add ： 给变量加上相应的值
+#
+# 2 addslashes : 给变量中的引号前加上斜线
+#
+# 3 capfirst : 首字母大写
+#
+# 4 cut ： 从字符串中移除指定的字符
+#
+# 5 date ： 格式化日期字符串
+#
+# 6 default ： 如果值是False,就替换成设置的默认值，否则就是用本来的值
+#
+# 7 default_if_none: 如果值是None，就替换成设置的默认值，否则就使用本来的值{% endcomment %}
+
+<h1>{{ l }}</h1>
+<h1>l.0: {{ l.0 }} 、 l.1 : {{ l.1 }}</h1>
+<h1>{{ d }}</h1>
+<h1>name: {{ d.name }}</h1>
+<h1>age: {{ d.age }}</h1>
+{% comment %}class{% endcomment %}
+<h1>age: {{ c.name }}</h1>
+<h1>age: {{ c.sex }}</h1>
+<h1>age: {{ testfilter }}</h1>
+<h1> add方法: {{ num|add:8 }}</h1>
+<h1> a标签: {{ a|safe }}</h1>
+<h1> for :
+{% comment %}counter0 计数器{% endcomment %}
+{% comment %}counter 计数器{% endcomment %}
+{% for i in l %}
+    {{ forloop.counter0 }}<li>{{ i }}</li>
+{% endfor %}
+
+</h1>
+
+
+
+</body>
+</html>
